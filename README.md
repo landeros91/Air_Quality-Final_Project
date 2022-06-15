@@ -5,6 +5,7 @@
 ### Selected Topic
 
 Air Quality Analysis
+
 Counties:
 - Alameda County - Urban
 - LA County - Urban
