@@ -16,7 +16,8 @@ Counties:
 
 ### Reason
 
-Compare air quality from 2019 - 2020 due to California wild fires
+Compare air quality from 2019 - 2020 due to California wild fires. Our team has experienced issues with air quality in California and wanted to make a comparison with 2019 and 2020 air quality. 
+
 
 ### Description of Source Data
 
