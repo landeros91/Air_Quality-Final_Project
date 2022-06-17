@@ -32,3 +32,7 @@ Compare air quality from 2019 - 2020 due to California wild fires
 - Which counties' air quality was affected the most?
 - How did wind contribute to air quality?
 - Which county had better air quality?
+
+### Motivation
+
+
