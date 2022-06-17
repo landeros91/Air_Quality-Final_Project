@@ -34,5 +34,4 @@ Compare air quality from 2019 - 2020 due to California wild fires
 - Which county had better air quality?
 
 ### Motivation
-
-
+I was working in ICU as a Patient Medical Representative. There was a healthy 32 year old male started to have a cough because of the Roseville wildfire. During this time, I was living in Hayward, CA and it was raining ashes and smoky there. The male patient was given a prescription of an inhaler and sent home from a different hospital. This male patient came into our hospital the very next day because he did not 'feel right' because of the cough. As he was being assessed in the Emergency Department, his heart stopped beating and there was a call for rapid response for code blue in Emergency Department. ICU automatically gets activated and we had began CPR on the patient. The life saving measures went on for 45 minutes and we weren't unsuccessful in bringing the patient back to life. I was 23 at the time. I am 28 now and my significant other is 32. This experience has left me scarred that a healthy person could simply drop dead because of the quality of the air we breathe.
