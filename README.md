@@ -25,7 +25,6 @@ Compare air quality from 2019 - 2020 due to California wildfires
 - Valley Air: https://ww2.valleyair.org/air-quality-information
 - Air Now: https://www.airnow.gov/?city=Modesto&state=CA&country=USA
 - Air Now API: https://docs.airnowapi.org/docs/AirNowAPIFactSheet.pdf
-- Air Now API Dataset: http://files.airnowtech.org/
 
 ### Questions to Answer
 
