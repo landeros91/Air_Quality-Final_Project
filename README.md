@@ -24,7 +24,6 @@ Compare air quality from 2019 - 2020 due to California wildfires
 - CIMIS Link: https://cimis.water.ca.gov/Default.aspx
 - Valley Air: https://ww2.valleyair.org/air-quality-information
 - Air Now: https://www.airnow.gov/?city=Modesto&state=CA&country=USA
-- Air Now API: https://docs.airnowapi.org/docs/AirNowAPIFactSheet.pdf
 
 ### Questions to Answer
 
