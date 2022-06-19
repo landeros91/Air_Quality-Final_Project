@@ -203,7 +203,49 @@ def extract_PM_sites(site):
     else:
         print("not found")
     
-
+def extract_Wind_sites(site):
+    if site == '3154':
+        site_3154_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('3154')]
+        return site_3154_Wind1.to_csv('Cleaned_data/Site_3154_Wind_dataset.csv')
+    
+    elif site == '3011':
+        site_3011_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('3011')]
+        return site_3011_Wind1.to_csv('Cleaned_data/Site_3011_Wind_dataset.csv')
+    
+    elif site == '2899':
+        site_2899_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('2899')]
+        return site_2899_Wind1.to_csv('Cleaned_data/Site_2899_Wind_dataset.csv')
+    
+    elif site == '2955':
+        site_2955_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('2955')]
+        return site_2955_Wind1.to_csv('Cleaned_data/Site_2955_Wind_dataset.csv')
+    
+    elif site == '3762':
+        site_3762_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('3762')]
+        return site_3762_Wind1.to_csv('Cleaned_data/Site_3762_Wind_dataset.csv')
+    
+    elif site == '3658':
+        site_3658_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('3658')]
+        return site_3658_Wind1.to_csv('Cleaned_data/Site_3658_Wind_dataset.csv')
+    
+    elif site == '2956':
+        site_2956_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('2956')]
+        return site_2956_Wind1.to_csv('Cleaned_data/Site_2956_Wind_dataset.csv')
+         
+    elif site == '2948':
+        site_2948_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('2948')]
+        return site_2948_Wind1.to_csv('Cleaned_data/Site_2948_Wind_dataset.csv')
+    
+    elif site == '2849':
+        site_2849_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('2849')]
+        return site_2849_Wind1.to_csv('Cleaned_data/Site_2849_Wind_dataset.csv')
+    
+    elif site == '3026':
+        site_3026_Wind1 = Wind_DATA_df2[Wind_DATA_df2.site.str.contains('3026')]
+        return site_3026_Wind1.to_csv('Cleaned_data/Site_3026_Wind_dataset.csv')
+    
+    else:
+        print("not found")
 
 
 
