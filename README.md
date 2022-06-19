@@ -33,4 +33,4 @@ Compare air quality from 2019 - 2020 due to California wildfires
 
 ### Motivation
 
-Had different experiences with air quality throughout CA, especially during the wildfire season.We want to see how the counties we have listed were affected.
+Had different experiences with air quality throughout CA, especially during the wildfire season. We want to see how the counties we have listed were affected.
