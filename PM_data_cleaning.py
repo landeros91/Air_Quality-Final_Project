@@ -18,7 +18,7 @@ import glob
 
 #add multiple csv files with PM10 Data
 
-CSV_file_PM10 = (r'/Users/robertvanderweele/git/Air_Quality-Final_Project/rawdata/PM10/*.csv')
+CSV_file_PM10 = (r'/Users/robertvanderweele/git/Air_Q-project raw data/PM10/*.csv')
 
 CSV_files_PM10 =  glob.glob(CSV_file_PM10)
 #empty list
@@ -34,7 +34,7 @@ PM10_DATA_df = pd.concat((frames), ignore_index=True)
 
 #add multiple csv files with wind Data
 
-CSV_file_wind = (r'/Users/robertvanderweele/git/Air_Quality-Final_Project/rawdata/Wind/*.csv')
+CSV_file_wind = (r'/Users/robertvanderweele/git/Air_Q-project raw data/Wind/*.csv')
 
 CSV_files_wind =  glob.glob(CSV_file_wind)
 #empty list
@@ -158,4 +158,62 @@ Wind_DATA_df2.to_csv('Cleaned_data/small_wind_dataset.csv')
 
 #full PM dataset
 PM10_DATA_df2.to_csv('Cleaned_data/small_PM_dataset.csv')
+
+def extract_PM_sites(site):
+    if site == '3154':
+        site_3154_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('3154')]
+        return site_3154_PM1.to_csv('Cleaned_data/Site_3154_PM_dataset.csv')
+    
+    elif site == '3011':
+        site_3011_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('3011')]
+        return site_3011_PM1.to_csv('Cleaned_data/Site_3011_PM_dataset.csv')
+    
+    elif site == '2899':
+        site_2899_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('2899')]
+        return site_2899_PM1.to_csv('Cleaned_data/Site_2899_PM_dataset.csv')
+    
+    elif site == '2955':
+        site_2955_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('2955')]
+        return site_2955_PM1.to_csv('Cleaned_data/Site_2955_PM_dataset.csv')
+    
+    elif site == '3762':
+        site_3762_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('3762')]
+        return site_3762_PM1.to_csv('Cleaned_data/Site_3762_PM_dataset.csv')
+    
+    elif site == '3658':
+        site_3658_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('3658')]
+        return site_3658_PM1.to_csv('Cleaned_data/Site_3658_PM_dataset.csv')
+    
+    elif site == '2956':
+        site_2956_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('2956')]
+        return site_2956_PM1.to_csv('Cleaned_data/Site_2956_PM_dataset.csv')
+         
+    elif site == '2948':
+        site_2948_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('2948')]
+        return site_2948_PM1.to_csv('Cleaned_data/Site_2948_PM_dataset.csv')
+    
+    elif site == '2849':
+        site_2849_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('2849')]
+        return site_2849_PM1.to_csv('Cleaned_data/Site_2849_PM_dataset.csv')
+    
+    elif site == '3026':
+        site_3026_PM1 = PM10_DATA_df2[PM10_DATA_df2.site.str.contains('3026')]
+        return site_3026_PM1.to_csv('Cleaned_data/Site_3026_PM_dataset.csv')
+    
+    else:
+        print("not found")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
