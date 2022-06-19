@@ -112,12 +112,11 @@ PM10_DATA_df['dateC'] = pd.to_datetime(PM10_DATA_df.date) + PM10_DATA_df.start_h
 #create a copy of the cleaned PM dataframe
 PM10_DATA_df2 = PM10_DATA_df
 
+
 PM10_DATA_df2.drop(PM10_DATA_df2.columns[[11]], axis=1, inplace=True)
-PM10_DATA_df2.drop(PM10_DATA_df2.columns[[10]], axis=1, inplace=True)
-PM10_DATA_df2.drop(PM10_DATA_df2.columns[[9]], axis=1, inplace=True)
-PM10_DATA_df2.drop(PM10_DATA_df2.columns[[8]], axis=1, inplace=True)
 PM10_DATA_df2.drop(PM10_DATA_df2.columns[[7]], axis=1, inplace=True)
-PM10_DATA_df2.drop(PM10_DATA_df2.columns[[5]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[6]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[4]], axis=1, inplace=True)
 PM10_DATA_df2.drop(PM10_DATA_df2.columns[[2]], axis=1, inplace=True)
 PM10_DATA_df2.drop(PM10_DATA_df2.columns[[1]], axis=1, inplace=True)
 
