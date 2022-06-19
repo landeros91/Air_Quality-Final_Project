@@ -51,7 +51,50 @@ Wind_DATA_df = pd.concat((frames1), ignore_index=True)
 #drop columns with no data - wind data
 Wind_DATA_df.drop(Wind_DATA_df.columns[[17]], axis=1, inplace=True)
 Wind_DATA_df.drop(Wind_DATA_df.columns[[16]], axis=1, inplace=True)
+Wind_DATA_df.drop(Wind_DATA_df.columns[[9]], axis=1, inplace=True)
 
+#drop rows with NANs wind data
+Wind_DATA_df = Wind_DATA_df.dropna(how='any')
+
+#combine date and start hour to datetime64[ns] in a new column - Wind Data
+Wind_DATA_df['start_hour'] = Wind_DATA_df['start_hour'].astype(int)
+Wind_DATA_df['dateC'] = pd.to_datetime(Wind_DATA_df.date) + Wind_DATA_df.start_hour.astype('timedelta64[h]')
+
+#create a copy of the cleaned wind dataframe
+Wind_DATA_df2 = Wind_DATA_df
+
+
+Wind_DATA_df2.drop(Wind_DATA_df2.columns[[11]], axis=1, inplace=True)
+Wind_DATA_df2.drop(Wind_DATA_df2.columns[[10]], axis=1, inplace=True)
+Wind_DATA_df2.drop(Wind_DATA_df2.columns[[9]], axis=1, inplace=True)
+Wind_DATA_df2.drop(Wind_DATA_df2.columns[[8]], axis=1, inplace=True)
+Wind_DATA_df2.drop(Wind_DATA_df2.columns[[7]], axis=1, inplace=True)
+Wind_DATA_df2.drop(Wind_DATA_df2.columns[[5]], axis=1, inplace=True)
+Wind_DATA_df2.drop(Wind_DATA_df2.columns[[2]], axis=1, inplace=True)
+Wind_DATA_df2.drop(Wind_DATA_df2.columns[[1]], axis=1, inplace=True)
+
+
+#grouping data by quarter - Wind data
+
+Wind_mask_1 = (Wind_DATA_df2['dateC'] > '01-01-2019') & (Wind_DATA_df2['dateC'] <= '03-31-2019')
+Wind_mask_2 = (Wind_DATA_df2['dateC'] > '04-01-2019') & (Wind_DATA_df2['dateC'] <= '06-30-2019')
+Wind_mask_3 = (Wind_DATA_df2['dateC'] > '06-01-2019') & (Wind_DATA_df2['dateC'] <= '08-30-2019')
+Wind_mask_4 = (Wind_DATA_df2['dateC'] > '09-01-2019') & (Wind_DATA_df2['dateC'] <= '12-31-2019')
+
+Wind_mask_5 = (Wind_DATA_df2['dateC'] > '01-01-2020') & (Wind_DATA_df2['dateC'] <= '03-31-2020')
+Wind_mask_6 = (Wind_DATA_df2['dateC'] > '04-01-2020') & (Wind_DATA_df2['dateC'] <= '06-30-2020')
+Wind_mask_7 = (Wind_DATA_df2['dateC'] > '06-01-2020') & (Wind_DATA_df2['dateC'] <= '08-30-2020')
+Wind_mask_8 = (Wind_DATA_df2['dateC'] > '09-01-2020') & (Wind_DATA_df2['dateC'] <= '12-31-2020')
+
+Wind_qrt_1_2019 = Wind_DATA_df2.loc[Wind_mask_1]
+Wind_qrt_2_2019 = Wind_DATA_df2.loc[Wind_mask_2]
+Wind_qrt_3_2019 = Wind_DATA_df2.loc[Wind_mask_3]
+Wind_qrt_4_2019 = Wind_DATA_df2.loc[Wind_mask_4]
+
+Wind_qrt_1_2020 = Wind_DATA_df2.loc[Wind_mask_5]
+Wind_qrt_2_2020 = Wind_DATA_df2.loc[Wind_mask_6]
+Wind_qrt_3_2020 = Wind_DATA_df2.loc[Wind_mask_7]
+Wind_qrt_4_2020 = Wind_DATA_df2.loc[Wind_mask_8]
 
 
 #drop columns with no data - PM data
@@ -66,25 +109,53 @@ PM10_DATA_df = PM10_DATA_df.dropna(how='any')
 PM10_DATA_df['start_hour'] = PM10_DATA_df['start_hour'].astype(int)
 PM10_DATA_df['dateC'] = pd.to_datetime(PM10_DATA_df.date) + PM10_DATA_df.start_hour.astype('timedelta64[h]')
 
+#create a copy of the cleaned PM dataframe
+PM10_DATA_df2 = PM10_DATA_df
+
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[11]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[10]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[9]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[8]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[7]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[5]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[2]], axis=1, inplace=True)
+PM10_DATA_df2.drop(PM10_DATA_df2.columns[[1]], axis=1, inplace=True)
+
 
 #grouping data by quarter - PM data
 
-PM_mask_1 = (PM10_DATA_df['dateC'] > '01-01-2019') & (PM10_DATA_df['dateC'] <= '03-31-2019')
-PM_mask_2 = (PM10_DATA_df['dateC'] > '04-01-2019') & (PM10_DATA_df['dateC'] <= '06-30-2019')
-PM_mask_3 = (PM10_DATA_df['dateC'] > '06-01-2019') & (PM10_DATA_df['dateC'] <= '08-30-2019')
-PM_mask_4 = (PM10_DATA_df['dateC'] > '09-01-2019') & (PM10_DATA_df['dateC'] <= '12-31-2019')
+PM_mask_1 = (PM10_DATA_df2['dateC'] > '01-01-2019') & (PM10_DATA_df2['dateC'] <= '03-31-2019')
+PM_mask_2 = (PM10_DATA_df2['dateC'] > '04-01-2019') & (PM10_DATA_df2['dateC'] <= '06-30-2019')
+PM_mask_3 = (PM10_DATA_df2['dateC'] > '06-01-2019') & (PM10_DATA_df2['dateC'] <= '08-30-2019')
+PM_mask_4 = (PM10_DATA_df2['dateC'] > '09-01-2019') & (PM10_DATA_df2['dateC'] <= '12-31-2019')
 
-PM_mask_5 = (PM10_DATA_df['dateC'] > '01-01-2020') & (PM10_DATA_df['dateC'] <= '03-31-2020')
-PM_mask_6 = (PM10_DATA_df['dateC'] > '04-01-2020') & (PM10_DATA_df['dateC'] <= '06-30-2020')
-PM_mask_7 = (PM10_DATA_df['dateC'] > '06-01-2020') & (PM10_DATA_df['dateC'] <= '08-30-2020')
-PM_mask_8 = (PM10_DATA_df['dateC'] > '09-01-2020') & (PM10_DATA_df['dateC'] <= '12-31-2020')
+PM_mask_5 = (PM10_DATA_df2['dateC'] > '01-01-2020') & (PM10_DATA_df2['dateC'] <= '03-31-2020')
+PM_mask_6 = (PM10_DATA_df2['dateC'] > '04-01-2020') & (PM10_DATA_df2['dateC'] <= '06-30-2020')
+PM_mask_7 = (PM10_DATA_df2['dateC'] > '06-01-2020') & (PM10_DATA_df2['dateC'] <= '08-30-2020')
+PM_mask_8 = (PM10_DATA_df2['dateC'] > '09-01-2020') & (PM10_DATA_df2['dateC'] <= '12-31-2020')
 
-qrt_1_2019 = PM10_DATA_df.loc[PM_mask_1]
-qrt_2_2019 = PM10_DATA_df.loc[PM_mask_2]
-qrt_3_2019 = PM10_DATA_df.loc[PM_mask_3]
-qrt_4_2019 = PM10_DATA_df.loc[PM_mask_4]
+PM_qrt_1_2019 = PM10_DATA_df2.loc[PM_mask_1]
+PM_qrt_2_2019 = PM10_DATA_df2.loc[PM_mask_2]
+PM_qrt_3_2019 = PM10_DATA_df2.loc[PM_mask_3]
+PM_qrt_4_2019 = PM10_DATA_df2.loc[PM_mask_4]
 
-qrt_1_2020 = PM10_DATA_df.loc[PM_mask_5]
-qrt_2_2020 = PM10_DATA_df.loc[PM_mask_6]
-qrt_3_2020 = PM10_DATA_df.loc[PM_mask_7]
-qrt_4_2020 = PM10_DATA_df.loc[PM_mask_8]
+PM_qrt_1_2020 = PM10_DATA_df2.loc[PM_mask_5]
+PM_qrt_2_2020 = PM10_DATA_df2.loc[PM_mask_6]
+PM_qrt_3_2020 = PM10_DATA_df2.loc[PM_mask_7]
+PM_qrt_4_2020 = PM10_DATA_df2.loc[PM_mask_8]
+
+
+#Export cleaned data sets
+
+#full wind dataset
+Wind_DATA_df.to_csv('Cleaned_data/Full_wind_dataset.csv')
+
+#full PM dataset
+PM10_DATA_df.to_csv('Cleaned_data/Full_PM_dataset.csv')
+
+# small wind dataset
+Wind_DATA_df2.to_csv('Cleaned_data/small_wind_dataset.csv')
+
+#full PM dataset
+PM10_DATA_df2.to_csv('Cleaned_data/small_PM_dataset.csv')
+
