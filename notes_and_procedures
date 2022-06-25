@@ -71,3 +71,7 @@ Future Steps: 6/19 - 6/26
 Will create a database in Postgres for PM Data.
 Tables will be created for wind patterns and air quality.
 Note: Data will help to manipulate and gather specific data according to what is needed along the project.
+
+06/25
+Tahani has created a table to add to our database.
+Robert has cleaned up the data to add extra columns to the csv file taht we will be using for our database.
