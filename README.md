@@ -40,6 +40,15 @@ Compare air quality from 2019 - 2020 due to California wildfires
 
 Had different experiences with air quality throughout CA, especially during the wildfire season.We want to see how the counties we have listed were affected.
 
+
+### Conclusion
+
+In 2019 alone, California has had a 7860 cases of wildfire (Cal Fire, 2019)
+In 2020, California has had 8648 cases of wildfire recorded (Cal Fire, 2020)
+Wildfires in 2019-2020 in the listed researched California counties has directly affected its air quality and quality of life of the people living there.
+According to the data - Los Angeles, Fresno, and Sacramento counties are the top 3 that have the worst air quality due to wildfires within or near the researched counties
+
+
 ### Data Limitations
 
 We need updated data on numbers of deaths from existing heart and lung diseases relating to poor air quality in 2019-2020 - 
