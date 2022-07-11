@@ -39,3 +39,10 @@ Compare air quality from 2019 - 2020 due to California wildfires
 ### Motivation
 
 Had different experiences with air quality throughout CA, especially during the wildfire season.We want to see how the counties we have listed were affected.
+
+### Data Limitations
+
+We need updated data on numbers of deaths from existing heart and lung diseases relating to poor air quality in 2019-2020 - 
+We need updated data on numbers of new diagnoses of heart and lung diseases following a major wildfire in 2019-2020
+
+
