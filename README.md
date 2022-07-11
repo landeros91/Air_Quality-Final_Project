@@ -6,13 +6,14 @@
 
 Air Quality Analysis
 Counties:
-- Alameda County - Urban
+
 - LA County - Urban
 - San Luis Obispo County - Rural 
 - Fresno County - Agricultural and Rural
 - Inyo County - Rural / Mountain / Desert
-- Shasta County - Rural Mountain
-Placer County - suburban
+- El Dorado County - Rural
+- Sacramento County - Urban/Rural
+- Placer County - Suburban
 
 
 ### Reason
