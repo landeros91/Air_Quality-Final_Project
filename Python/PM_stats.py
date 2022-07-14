@@ -66,7 +66,7 @@ stats_summary_2019_df = pd.DataFrame({
     "Data_Points": monitoring_loc_2019_data_counts})
 
 #Statistics dataset
-stats_summary_2019_df.to_csv('Cleaned_data/Stats_2019_dataset.csv')
+#stats_summary_2019_df.to_csv('Cleaned_data/Stats_2019_dataset.csv')
 
 # 2020 data set statisitics
 df_PM2020_names = PM_2020['name'].unique()
@@ -84,4 +84,4 @@ stats_summary_2020_df = pd.DataFrame({
     "Data_Points": monitoring_loc_2020_data_counts})
 
 #Statistics dataset
-stats_summary_2020_df.to_csv('Cleaned_data/Stats_2020_dataset.csv')
+#stats_summary_2020_df.to_csv('Cleaned_data/Stats_2020_dataset.csv')
